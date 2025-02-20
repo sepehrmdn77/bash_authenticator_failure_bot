@@ -19,7 +19,7 @@ CHAT_ID="112007224" # Your chat ID
 MESSAGE="Failure attempt in login!" # Failure text
 
 for i in $y; do
-    if (($i>1));then # if there is 0 errors nothing weill be done
+    if (($i>1));then # if there is 0 errors nothing will be done
         curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" -d chat_id=$CHAT_ID -d text="$MESSAGE" # Sending failure mesg
     fi
 done
