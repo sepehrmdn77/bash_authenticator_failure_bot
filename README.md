@@ -26,8 +26,8 @@ Open the script file auth_failure_bot.sh and configure the required variables su
 
 3. **Set up a cron job:**
 Schedule the script to run at regular intervals using cron. For example, to run the script every 5 minutes, add the following line to your crontab:
-    '''bash
-    */5 * * * * /path/to/auth_failure_bot.sh
+   ```bash
+   */5 * * * * /path/to/auth_failure_bot.sh
 
 ## Usage
 
