@@ -14,8 +14,8 @@ main (){ # Defining second function to use log and pipe it to first function
 declare -i x=$(main) # Here we have the authentication failure as $x
 y=$(eval echo {0..$x}) # Getting error counts range
 
-TOKEN="7778525595:AAFkd-n1E6zyZKlf-HqxG3DH8D3CD8PRGkU" # Your telegram bot token
-CHAT_ID="112007224" # Your chat ID
+TOKEN="BOT_TOKEN" # Your telegram bot token
+CHAT_ID="CHAT_ID" # Your chat ID
 MESSAGE="Failure attempt in login!" # Failure text
 
 for i in $y; do
@@ -23,5 +23,5 @@ for i in $y; do
         curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" -d chat_id=$CHAT_ID -d text="$MESSAGE" # Sending failure mesg
     fi
 done
-(crontab -l 2>/dev/null; echo "* * * * * /home/sepehr/bash_learning/login_attemp_project/error_counter.sh") | crontab # Setting cron job
+(crontab -l 2>/dev/null; echo "* * * * * /path/to/your/project.sh") | crontab # Removing existing cron job and adding new cron job
 echo
